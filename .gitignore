@@ -1,0 +1,10 @@
+
+.env/
+.env
+
+media/
+/static
+local/
+
+!media/.keep
+!static/.keep

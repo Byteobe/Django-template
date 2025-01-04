@@ -1,0 +1,83 @@
+[
+    {
+        "model": "main.country",
+        "pk": 1,
+        "fields": {
+            "name": "Colombia",
+            "iso_code": "COL",
+            "slug": "colombia"
+        }
+    },
+    {
+        "model": "main.state",
+        "pk": 1,
+        "fields": {
+            "country": 1,
+            "name": "Bogotá D.C.",
+            "dane_code": "11",
+            "geonames_code": null,
+            "slug": "bogota-dc"
+        }
+    },
+    {
+        "model": "main.state",
+        "pk": 2,
+        "fields": {
+            "country": 1,
+            "name": "Antioquia",
+            "dane_code": "05",
+            "geonames_code": null,
+            "slug": "antioquia"
+        }
+    },
+    {
+        "model": "main.state",
+        "pk": 3,
+        "fields": {
+            "country": 1,
+            "name": "Valle del Cauca",
+            "dane_code": "76",
+            "geonames_code": null,
+            "slug": "valle-del-cauca"
+        }
+    },
+    {
+        "model": "main.city",
+        "pk": 1,
+        "fields": {
+            "state": 1,
+            "name": "Bogotá",
+            "dane_code": "11001",
+            "slug": "bogota",
+            "coords_lat": 4.7110,
+            "coords_long": -74.0721,
+            "geo_location": null
+        }
+    },
+    {
+        "model": "main.city",
+        "pk": 2,
+        "fields": {
+            "state": 2,
+            "name": "Medellín",
+            "dane_code": "05001",
+            "slug": "medellin",
+            "coords_lat": 6.2442,
+            "coords_long": -75.5812,
+            "geo_location": null
+        }
+    },
+    {
+        "model": "main.city",
+        "pk": 3,
+        "fields": {
+            "state": 3,
+            "name": "Cali",
+            "dane_code": "76001",
+            "slug": "cali",
+            "coords_lat": 3.4516,
+            "coords_long": -76.5320,
+            "geo_location": null
+        }
+    }
+]

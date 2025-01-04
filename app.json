@@ -1,0 +1,8 @@
+{
+    "scripts": {
+      "dokku": {
+        "postdeploy": "echo \"Environment: $ENVIRONMENT\" && ./manage.py migrate && ./manage.py collectstatic --noinput"
+      }
+    }
+  }
+  
