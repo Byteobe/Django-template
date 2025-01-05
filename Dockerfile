@@ -25,6 +25,8 @@ WORKDIR /src
 # Copy the requirements file and install dependencies
 COPY requirements.txt /src/
 RUN pip install -r /src/requirements.txt
+RUN pip install uvicorn[standard]
+
 
 # Copy the rest of the application code
 COPY . /src

@@ -1,1 +1,2 @@
-web: gunicorn domi_express.wsgi -b :$PORT --timeout 120
+web: uvicorn template.asgi:application --host 0.0.0.0 --port $PORT --workers 4
+

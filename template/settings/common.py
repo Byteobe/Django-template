@@ -53,6 +53,7 @@ ADDONS = [
     'rest_framework_simplejwt',
     'drf_spectacular',
     'django_filters',
+    'channels'
 ]
 
 INSTALLED_APPS = DEPENDENCIES_APPS + ADDONS + PROJECT_APPS
@@ -86,7 +87,8 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'template.wsgi.application'
+#WSGI_APPLICATION = 'template.wsgi.application'
+ASGI_APPLICATION = "template.asgi.application"
 
 
 
@@ -227,6 +229,17 @@ SPECTACULAR_SETTINGS = {
     'SERVERS': [{"url": "http://localhost:8000"}],
 
 }
+
+CHANNEL_LAYERS = {
+    "default": {
+        "BACKEND": "channels_redis.core.RedisChannelLayer",
+        "CONFIG": {
+            "hosts": [('redis', 6379)],
+        },
+    },
+}
+
+
 
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = os.environ.get('EMAIL_HOST', '')
