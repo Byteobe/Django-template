@@ -17,7 +17,7 @@ services:
     command: ["/scripts/start.sh"]
 
   db:
-    image: postgis/postgis:13-3.1
+    image: postgres:13
     environment:
       - POSTGRES_USER=postgres
       - POSTGRES_PASSWORD=postgres
