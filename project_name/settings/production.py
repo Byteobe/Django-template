@@ -36,14 +36,14 @@ if get_secret('DATABASE_URL'):
     DATABASES = {
         'default': dj_database_url.config()
     }
-    DATABASES['default']['ENGINE'] = 'django.contrib.gis.db.backends.postgis'
+    DATABASES['default']['ENGINE'] = 'django.db.backends.postgresql'
 else:
     POSTGRES_USER = get_secret('POSTGRES_USER')
     POSTGRES_PASSWORD = get_secret('POSTGRES_PASSWORD')
 
     DATABASES = {
         'default': {
-            'ENGINE': 'django.contrib.gis.db.backends.postgis',
+            'ENGINE': 'django.db.backends.postgresql',
             'NAME': 'project_name',
             'USER': POSTGRES_USER,
             'PASSWORD': POSTGRES_PASSWORD,

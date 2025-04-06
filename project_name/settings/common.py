@@ -37,7 +37,6 @@ DEPENDENCIES_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'django.contrib.humanize',
-    'django.contrib.gis',
 ]
 
 PROJECT_APPS = [
@@ -48,7 +47,6 @@ PROJECT_APPS = [
 
 ADDONS = [
     'rest_framework',
-    'rest_framework_gis',
     'rest_framework_simplejwt.token_blacklist',
     'rest_framework_simplejwt',
     'drf_spectacular',

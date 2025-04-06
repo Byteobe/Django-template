@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Settings, Product, Image
+from .models import Settings, Image
 
 
 # Register your models here.
@@ -8,9 +8,6 @@ from .models import Settings, Product, Image
 class SettingsAdmin(admin.ModelAdmin):
     pass
 
-@admin.register(Product)
-class ProductAdmin(admin.ModelAdmin):
-    pass
 
 @admin.register(Image)
 class ImageAdmin(admin.ModelAdmin):
