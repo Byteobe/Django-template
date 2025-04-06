@@ -17,7 +17,7 @@ from django.urls import re_path
 from main import routing
 
 environment = os.environ.get('ENVIRONMENT', 'development')
-os.environ.setdefault("DJANGO_SETTINGS_MODULE", "template.settings.{}".format(environment))
+os.environ.setdefault("DJANGO_SETTINGS_MODULE", "project_name.settings.{}".format(environment))
 application = ProtocolTypeRouter({
     "http": get_asgi_application(),
     "websocket": AuthMiddlewareStack(

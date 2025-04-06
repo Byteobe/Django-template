@@ -69,7 +69,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'template.urls'
+ROOT_URLCONF = 'project_name.urls'
 
 TEMPLATES = [
     {
@@ -88,7 +88,7 @@ TEMPLATES = [
 ]
 
 #WSGI_APPLICATION = 'template.wsgi.application'
-ASGI_APPLICATION = "template.asgi.application"
+ASGI_APPLICATION = "project_name.asgi.application"
 
 
 
@@ -156,9 +156,9 @@ MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 # Email Config
-EMAIL_SUBJECT_PREFIX = '[template] '
-DEFAULT_FROM_EMAIL = 'No Reply <template@gmail.co>'
-SERVER_EMAIL = 'Server <template@gmail.co>'
+EMAIL_SUBJECT_PREFIX = '[project_name] '
+DEFAULT_FROM_EMAIL = 'No Reply <project_name@gmail.co>'
+SERVER_EMAIL = 'Server <project_name@gmail.co>'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
@@ -200,7 +200,7 @@ SIMPLE_JWT = {
 
 
 SPECTACULAR_SETTINGS = {
-    'TITLE': 'template',
+    'TITLE': 'project_name',
     'DESCRIPTION': 'API Documentation',
     'SERVE_PUBLIC': True,
     'VERSION': '1.0.0',

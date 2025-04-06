@@ -44,7 +44,7 @@ else:
     DATABASES = {
         'default': {
             'ENGINE': 'django.contrib.gis.db.backends.postgis',
-            'NAME': 'template',
+            'NAME': 'project_name',
             'USER': POSTGRES_USER,
             'PASSWORD': POSTGRES_PASSWORD,
             'HOST': 'db',
