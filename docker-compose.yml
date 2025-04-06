@@ -1,8 +1,8 @@
 services:
-  template:
+  project_name:
     build: .
-    image: template
-    container_name: template
+    image: project_name
+    container_name: project_name
     ports:
       - "8000:8000"
     env_file:
@@ -21,7 +21,7 @@ services:
     environment:
       - POSTGRES_USER=postgres
       - POSTGRES_PASSWORD=postgres
-      - POSTGRES_DB=template
+      - POSTGRES_DB=project_name
     volumes:
       - postgres_data:/var/lib/postgresql/data
 
