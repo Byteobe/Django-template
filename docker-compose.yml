@@ -17,6 +17,7 @@ services:
     command: ["/scripts/start.sh"]
 
   db:
+    container_name: project_name_db
     image: postgis/postgis:13-3.1
     environment:
       - POSTGRES_USER=postgres
