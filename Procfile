@@ -1,1 +1,1 @@
-web: gunicorn domi_express.wsgi -b :$PORT --timeout 120
+web: gunicorn project_name.wsgi -b :$PORT --timeout 120
