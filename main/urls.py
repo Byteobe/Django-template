@@ -5,7 +5,7 @@ from django.urls import path
 from django.urls import include
 from main.views import home
 from rest_framework import routers
-from main.api import ConfigurationView, StateViewSet, CityViewSet, UnitOfMeasurementApi
+from main.api import ConfigurationView, StateViewSet, CityViewSet
 
 # api urls
 configurations_api_router = routers.DefaultRouter()
@@ -18,7 +18,6 @@ location_api_router.register(r'cities', CityViewSet, basename='city')
 apiurls = ([
     path('configurations/', include(configurations_api_router.urls)),
     path('location/', include(location_api_router.urls)),
-    path('unitOfMeasurement/', UnitOfMeasurementApi.as_view(), name='unitOfMeasurement'),
 ], 'main')
 
 

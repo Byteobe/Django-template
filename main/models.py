@@ -113,26 +113,11 @@ class Client(models.Model):
         return self.name
 
 
-class UnitOfMeasurement(models.Model):
-    name = models.CharField(_("Nombre del UnitOfMeasurement"), max_length=255)
-
-    def __str__(self):
-        return self.name
-
 
 class Image(models.Model):
     image = models.ImageField(_("Image"), upload_to="images/")
 
 
-class Product(models.Model):
-    name = models.CharField(max_length=255)
-    description = models.TextField()
-    unit_of_measurement = models.ForeignKey(UnitOfMeasurement, on_delete=models.CASCADE)
-    units = models.IntegerField(default=1)
-    images = models.ManyToManyField(Image, related_name='products', blank=True)
-
-    def __str__(self):
-        return self.name
 
 
 class SingletonModel(models.Model):
