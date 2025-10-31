@@ -193,16 +193,4 @@ class CurrentUserAPIView(GenericAPIView):
         return Response(current_user.data)
 
 
-@extend_schema(tags=["Users"])
-class DeliveriesListAPIView(generics.ListAPIView):
-    permission_classes = [permissions.AllowAny]
-    serializer_class = UserResponseSerializer
-
-    def get_queryset(self):
-        delivery_group = Group.objects.get(name="Delivery")
-        return User.objects.filter(groups=delivery_group)
-
-
-
-
 

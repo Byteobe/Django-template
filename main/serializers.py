@@ -4,7 +4,11 @@ from django.conf import settings
 from drf_spectacular.types import OpenApiTypes
 from drf_spectacular.utils import extend_schema_field
 from rest_framework import serializers
+<<<<<<< HEAD
 from .models import Settings, State, City, Product, Image
+=======
+from .models import Settings, State, City, Image
+>>>>>>> bdcfc6bf379e404483b5edd9b3f28e103448bfd5
 
 
 class SettingsSerializer(serializers.ModelSerializer):
@@ -51,7 +55,14 @@ class StateWithCitiesSerializer(serializers.ModelSerializer):
         fields = ['id', 'name', 'cities']
 
 
+<<<<<<< HEAD
 
 class GeneralMessageSerializer(serializers.Serializer):
     message = serializers.CharField()
 
+=======
+
+
+class GeneralMessageSerializer(serializers.Serializer):
+    message = serializers.CharField()
+>>>>>>> bdcfc6bf379e404483b5edd9b3f28e103448bfd5
