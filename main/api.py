@@ -3,8 +3,8 @@ from rest_framework import viewsets, permissions, status, generics
 from rest_framework.response import Response
 from rest_framework.views import APIView
 
-from .models import Settings, UnitOfMeasurement
-from .serializers import SettingsSerializer, UnitOfMeasurementSerializer
+from .models import Settings
+from .serializers import SettingsSerializer
 from rest_framework.decorators import action
 from .models import State, City
 from .serializers import (
@@ -45,8 +45,3 @@ class CityViewSet(viewsets.ReadOnlyModelViewSet):
         return Response(
             {"detail": "Method Not Allowed"},
             status=status.HTTP_405_METHOD_NOT_ALLOWED)
-
-class UnitOfMeasurementApi(generics.ListCreateAPIView):
-    queryset = UnitOfMeasurement.objects.all()
-    permission_classes = [permissions.AllowAny]
-    serializer_class = UnitOfMeasurementSerializer

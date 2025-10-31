@@ -220,8 +220,6 @@ SPECTACULAR_SETTINGS = {
     },
 
     'ENUM_NAME_OVERRIDES': {
-        'ServiceType': 'services.models.ServiceType',  # Mapea el campo `type` en el modelo `Service`
-        'ServiceStatus': 'services.models.ServiceStatus',  # Mapea el campo `status` en el modelo `Service`
     },
 
     'SERVERS': [{"url": "http://localhost:8000"}],
